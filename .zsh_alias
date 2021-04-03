@@ -1,0 +1,12 @@
+## Alias section 
+alias cp="cp -i"                                                # Confirm before overwriting something
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
+alias kgsecd='kubectl ksd get secret -o yaml'
+alias git-new='git add $(git ls-files -o --exclude-standard)'
+
+# Contains OS Specific Alias
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+fi

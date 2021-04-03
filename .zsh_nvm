@@ -1,0 +1,13 @@
+nvm() {
+    echo "🚨 NVM not loaded! Loading now..."
+    if [[ "$OSTYPE" == "linux-gnu" ]]; then
+        [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+        source /usr/share/nvm/nvm.sh
+        source /usr/share/nvm/bash_completion
+        source /usr/share/nvm/install-nvm-exec
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" 
+        [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  
+    fi
+}
