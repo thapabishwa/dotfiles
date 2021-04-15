@@ -301,7 +301,8 @@ assign [class="Chromium"] $ws11
 assign [class="ViberPC"] $ws11
 assign [class="Element"] $ws11
 assign [class="Signal"] $ws11
-#for_window [class="Xfce4-terminal"] floating enable
+for_window [class="Spotify"] move to workspace $ws10
+#for_window [class="Spotify"] floating enable
 
 # Autostart applications
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
@@ -313,6 +314,6 @@ exec --no-startup-id xcape -e 'Super_L=Super_L|Control_L|Escape'
 exec --no-startup-id slack
 exec --no-startup-id redshift-gtk
 exec --no-startup-id xfce4-panel --disable-wm-check
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id feh --bg-fill /usr/share/backgrounds/wallpapers-juhraya/Austria_by_Rutger_Heijmerikx.jpg
 exec --no-startup-id ibus-daemon -d -a /tmp/ibus
 exec --no-startup-id sudo powertop --auto
