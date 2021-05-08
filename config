@@ -120,6 +120,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 set $ws11 "Chats"
+set $ws12 "ZCC"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -302,7 +303,7 @@ assign [class="ViberPC"] $ws11
 assign [class="Element"] $ws11
 assign [class="Signal"] $ws11
 for_window [class="Spotify"] move to workspace $ws10
-#for_window [class="Spotify"] floating enable
+assign [class="ZSTray"] $ws12
 
 # Autostart applications
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
