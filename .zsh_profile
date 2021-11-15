@@ -144,9 +144,16 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+    arch_name="$(uname -m)"
+    if [ "${arch_name}" = "x86_64" ]; then
+      source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+      source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+      source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+    elif [ "${arch_name}" = "arm64" ]; then
+      source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+      source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+      source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+    fi
 fi
 
 # bind UP and DOWN arrow keys to history substring search
@@ -163,6 +170,10 @@ RPROMPT='$(git_prompt_string)'
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    source /usr/local/etc/profile.d/z.sh
+    arch_name="$(uname -m)"
+    if [ "${arch_name}" = "x86_64" ]; then
+      source /usr/local/etc/profile.d/z.sh
+    elif [ "${arch_name}" = "arm64" ]; then
+      source /opt/homebrew/etc/profile.d/z.sh
+    fi
 fi
-

@@ -1,9 +1,16 @@
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     source '/opt/kube-ps1/kube-ps1.sh'
     PROMPT='$(kube_ps1)'$PROMPT
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-    PS1='$(kube_ps1)'$PS1
+elif [[ "$OSTYPE" == "darwin" ]]; then
+    arch_name="$(uname -m)"
+    if [ "${arch_name}" = "x86_64" ]; then
+      source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+      PS1='$(kube_ps1)'$PS1
+    elif [ "${arch_name}" = "arm64" ]; then
+      echo "Running on ARM"
+        source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+        PS1='$(kube_ps1)'$PS1
+    fi
 fi
 
 function get_cluster_short() {
