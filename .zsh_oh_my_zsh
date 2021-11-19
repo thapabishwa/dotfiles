@@ -1,9 +1,4 @@
 # Contains OS Specific oh-my-zsh config
 plugins=(z git kubectl docker ansible cp helm web-search git-extras extract encode64 copyfile)
-
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    export ZSH="$HOME/.oh-my-zsh"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    export ZSH="$HOME/.oh-my-zsh"
-fi
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh

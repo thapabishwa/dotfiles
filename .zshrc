@@ -28,8 +28,6 @@ source ~/dotfiles/.zsh_zsh_kubeps1
 source ~/dotfiles/.zsh_autocompletion
 # ZSH Plugins
 source ~/dotfiles/.zsh_helm
-# ZSH Autoenv for kubectx commands
-source ~/dotfiles/.zsh_autoenv
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -3,5 +3,4 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export PATH="$HOME/Appsulate/zip/zip-infra/bin:$PATH"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$HOME/Appsulate/zip/zip-infra/bin:$PATH"
-    export PATH="/usr/local/opt/helm@2/bin:$PATH"
 fi
