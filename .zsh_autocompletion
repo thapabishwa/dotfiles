@@ -1,7 +1,7 @@
 #source <(helm completion zsh)                                   # helm autocomplete
 #source <(kubectl completion zsh)                                # kubectl autocomplete
-if [ "${arch_name}" = "arm64" ]; then
-    complete -C '/opt/homebrew/bin/aws_completer' aws                     # aws autocomplete
-else
-    complete -C '/usr/local/bin/aws_completer' aws                        # aws autocomplete
-fi
+#if [ "${arch_name}" = "arm64" ]; then
+#    complete -C '/opt/homebrew/bin/aws_completer' aws                     # aws autocomplete
+#else
+#    complete -C '/usr/local/bin/aws_completer' aws                        # aws autocomplete
+#fi
