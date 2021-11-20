@@ -1,6 +1,2 @@
 # Contains OS Specific Configurations
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    export PATH="$HOME/Appsulate/zip/zip-infra/bin:$PATH"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    export PATH="$HOME/Appsulate/zip/zip-infra/bin:$PATH"
-fi
+export PATH="$HOME/Appsulate/zip/zip-infra/bin:$PATH"

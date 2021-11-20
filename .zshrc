@@ -11,7 +11,7 @@ source ~/dotfiles/.zsh_go
 # ZSH history Configurations
 source ~/dotfiles/.zsh_history
 # ZSH nvm
-source ~/dotfiles/.zsh_nvm
+# source ~/dotfiles/.zsh_nvm
 # OS specific paths and configurations
 source ~/dotfiles/.zsh_os
 # ZSH Copy Paster fix
@@ -27,7 +27,6 @@ source ~/dotfiles/.zsh_zsh_kubeps1
 # ZSH Autocompletion
 source ~/dotfiles/.zsh_autocompletion
 # ZSH Plugins
-source ~/dotfiles/.zsh_helm
+# source ~/dotfiles/.zsh_helm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
