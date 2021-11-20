@@ -1,3 +1,5 @@
+# Import arch-name for m1
+arch_name="$(uname -m)"
 # Import oh-my-zsh path before importing oh-my-zsh
 source ~/dotfiles/.zsh_oh_my_zsh
 # Aliases

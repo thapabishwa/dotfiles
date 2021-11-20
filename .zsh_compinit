@@ -1,17 +1,10 @@
-arch_name="$(uname -m)"
 if [ "${arch_name}" = "arm64" ]; then
-    export ZPLUG_HOME=/opt/homebrew/opt/zplug
-    source $ZPLUG_HOME/init.zsh
-    if type brew &>/dev/null; then
-      FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-      FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-      autoload -Uz compinit
-      compinit
-    fi
-else
-    autoload -Uz compinit
-    for dump in ~/.zcompdump(N.mh+24); do
-      compinit
-    done
-    compinit -C
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
+  autoload -Uz compinit
+  if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+    compinit;
+  else
+    compinit -C;
+  fi;

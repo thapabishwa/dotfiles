@@ -6,7 +6,6 @@ nvm() {
         source /usr/share/nvm/bash_completion
         source /usr/share/nvm/install-nvm-exec
     elif [[ "$OSTYPE" == "darwin"* ]]; then
-        arch_name="$(uname -m)"
         if [ "${arch_name}" = "x86_64" ]; then
             export NVM_DIR="$HOME/.nvm"
             [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" 

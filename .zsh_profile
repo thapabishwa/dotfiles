@@ -82,7 +82,6 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    arch_name="$(uname -m)"
     if [ "${arch_name}" = "x86_64" ]; then
       source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
       source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -106,7 +105,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    arch_name="$(uname -m)"
     if [ "${arch_name}" = "x86_64" ]; then
       source /usr/local/etc/profile.d/z.sh
     elif [ "${arch_name}" = "arm64" ]; then
