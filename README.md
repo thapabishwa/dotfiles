@@ -10,7 +10,6 @@
 - [kubectl-krew](https://github.com/kubernetes-sigs/krew)
 - [kubectl-ksd](https://github.com/ashleyschuett/kubernetes-secret-decode)
 - [nvm](https://github.com/nvm-sh/nvm)
-- [oh-my-zsh](https://ohmyz.sh)
 - [pyenv](https://github.com/pyenv/pyenv)
 - [z](https://github.com/rupa/z)
 - [zsh](https://www.zsh.org)
@@ -22,3 +21,7 @@
 ### OSX Specific Dependencies
 
 - [slate](https://github.com/jigish/slate)
+
+
+### ZSH startup time
+![zsh startup](./docs/showcase/zsh.png)
