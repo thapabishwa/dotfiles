@@ -1,3 +1,4 @@
+export KUBE_PS1_NS_ENABLE=false
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     source '/opt/kube-ps1/kube-ps1.sh'
     PROMPT='$(kube_ps1)'$PROMPT
@@ -16,7 +17,7 @@ function get_cluster_short() {
   if [ $OUT -eq 5 ];then
     echo "$1" | cut -d - -f4-6 
   else
-   echo "$1"
+   echo "$1" | cut -d / -f2
   fi
 }
 

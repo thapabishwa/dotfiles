@@ -1,2 +1,3 @@
 # Contains OS Specific Configurations
 export PATH="$HOME/Appsulate/zip/zip-infra/bin:$PATH"
+export ENV=dev
