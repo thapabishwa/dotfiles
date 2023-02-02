@@ -5,7 +5,7 @@ ORG = thapabishwa
 PROJECT = dotfiles
 WORKDIR := $(shell pwd)
 TARGETDIR := ${HOME}
-OBJS = .zshrc .slate
+OBJS = zshrc slate
 
 ##@ Dependencies
 macdeps:  ## Get dependencies for local build
@@ -38,12 +38,12 @@ delete: ## Delete
 	rm -rf ${TARGETDIR}/.slate.bak.*
 
 ##@ .slate
-.slate: ## Inject .slate
+slate: ## Inject .slate
 	$(info Install slate to home folder)
 	ln -s $(WORKDIR)/.slate $(TARGETDIR)/.slate
 
 ##@ .zshrc
-.zshrc: ## Inject .zshrc
+zshrc: ## Inject .zshrc
 	$(info Install zshrc to home folder)
 	ln -s $(WORKDIR)/.zshrc $(TARGETDIR)/.zshrc
 
