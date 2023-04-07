@@ -1,4 +1,4 @@
 # Contains OS Specific oh-my-zsh config
-plugins=(z kubectl cp)
+plugins=(z cp)
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh

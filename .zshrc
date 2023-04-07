@@ -2,7 +2,7 @@
 #[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Import arch-name for m1
 arch_name="$(uname -m)"
-DIR="$HOME/thapabishwa/dotfiles"
+DIR="$HOME/Developer/thapabishwa/dotfiles"
 # Import oh-my-zsh path before importing oh-my-zsh
 # source $DIR/.zsh_oh_my_zsh
 # Aliases
@@ -28,7 +28,7 @@ source $DIR/.zsh_profile
 # ZSH  Pyenv 
 source $DIR/.zsh_pyenv
 # ZSH Kubernetes Prompt Add on
-source $DIR/.zsh_zsh_kubeps1
+# source $DIR/.zsh_zsh_kubeps1
 # ZSH Autocompletion
 source $DIR/.zsh_autocompletion
 # ZSH Plugins
